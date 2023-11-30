@@ -1,0 +1,125 @@
+
+.menu-lateral {
+    position: fixed;
+    width: 130px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 1px 0 10px 1px #C4C4C4;
+}
+
+.borda-elemento {
+    margin: 15px;
+    display: flex;
+    height: 100vh;
+}
+
+.menu-1 {
+    display: none;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.menu-fechado {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.logo-principal {
+    height: 100%;
+    width: 100%;
+}
+
+.interacao-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px 0 0 0;
+}
+
+
+
+.itens-unicos-menu {
+    border: 2px solid #EDEDED;
+    border-radius: 12px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 5px 1px #D4EFFF;
+}
+
+.itens-unicos-menu-fechado{
+    display: flex;
+    border: 2px solid #EDEDED;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px 1px #D4EFFF;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 70px;
+    height: 70px;
+}
+
+.itens-geral-menu-fechado   {
+    list-style: none;
+    padding: 0 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.itens-geral-menu {
+    list-style: none;
+    padding: 0 0 100px 0;
+}
+
+.texto-menu {
+    color: #000000;
+    font-weight: 600;
+    padding-left: 15px;
+    font-size: 21px;
+}
+
+.links-paginas-menu {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.itens-menu-lateral-div {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+
+.menu-fechado-links {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}

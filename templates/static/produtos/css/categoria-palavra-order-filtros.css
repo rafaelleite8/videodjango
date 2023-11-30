@@ -1,0 +1,70 @@
+.todas-categorias-div {
+    position: absolute;
+    display: none;
+    background-color: #ffffff;
+    z-index: 1;
+    border: 2px solid #C8C8C8;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px #BDBDBD;
+    aligh-items: center;
+    justify-content: center;
+    width: 637px;
+    top: 35px;
+}
+
+
+
+.todas-categorias-divisao {
+    display: grid;
+    grid-template-columns: 240px 180px 220px;
+    width: 100%;
+    height: 100%;
+    margin: 20px 15px 15px 15px;
+}
+
+.categorias-unicas {
+    font-family: "Inter", sans-serif;
+    color: #242424;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    margin: 7px;
+}
+
+.link-categoria {
+    text-decoration: none;
+}
+
+.categorias-selecao {
+display: grid;
+grid-template-columns: 1fr 40px;
+}
+
+.todascategoriasdiv {
+    padding-left: 15px;
+    display: flex;
+    align-items: left;
+}
+
+.ordenar-filtro-lista-secao {
+    position: absolute;
+    background-color: #ffffff;
+    z-index: -1;
+    border: 2px solid #C8C8C8;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px #BDBDBD;
+    aligh-items: center;
+    justify-content: center;
+    top: 65px;
+    width: 206px;
+    display: none;
+}
+
+.div-ordenar {
+    position: relative;
+    z-index: 2;
+}
+
+.link-ordenar {
+    text-decoration: none;
+}

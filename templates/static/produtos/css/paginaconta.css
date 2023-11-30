@@ -1,0 +1,144 @@
+.nome-usuario-text {
+            color: #000000;
+            font-family: "Inter", sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+.secao-configuracoes-conta {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 800px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.config-conta-text {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.div-troca-senha {
+    background-color: #EFF9FF;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.trocar-senha-text {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bnt-trocar-senha-text {
+    background-color: #017CCB;
+    width: 130px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.forgot-password {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #848484;
+  font-weight: 500;
+}
+
+
+
+.input-formulario {
+  width: 300px;
+  padding: 15px;
+  color: #000000;
+  border: 1px solid #C8C8C8;
+  outline: none;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  padding-left: 40px;
+}
+
+.input-formulario:focus {
+  border: 1px solid blue;
+}
+
+.campo-senha {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #327CCB;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius:5px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 120px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #0037A8;
+}
+
+.icones-login {
+    width: 21px;
+    height: auto;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+
+.icones-login-2 {
+    width: 12px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.secao-mudar-senha {
+    display: none;
+    padding: 30px;
+}
+
+
+.erros-div {
+    padding-top: 20px;
+}
+
+.erro-usuario {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: brown;
+    }
+
+.sucessosenha-usuario {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: darkgreen;
+    }

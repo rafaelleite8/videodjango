@@ -1,0 +1,356 @@
+.produto-unicos-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.produto {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 1px #C4C4C4;
+    padding: 4px;
+}
+
+.img-produto{
+    border-radius: 5px;
+}
+
+.imagem-texto-div {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.informaçoes-produto-div {
+    padding: 20px;
+}
+
+.nome-produto {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limite de 2 linhas */
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+}
+
+.nome-produto-div {
+    display: flex;
+    height: 55px;
+    align-items: center;
+}
+
+.seção-avaliação-temperatura{
+    display: flex;
+    padding-top: 5px;
+}
+
+.avaliaçãoesatisfação-div {
+    background-color: #EFF9FF;
+    padding: 7px;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+
+.temperatura-div {
+    background-color: #EFF9FF;
+    padding: 7px;
+    border-radius: 8px;
+    margin-left: 10px;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+
+.nota-produto-texto {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 2px;
+}
+
+.avaliações-texto {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.estrela-img {
+    padding-bottom: 1px;
+}
+
+.grau-texto {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.comissao-produto-div {
+    font-family: "Inter", sans-serif;
+    color: #00890E;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.comissao-ate-div {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.seção-comissão-preço {
+    padding-bottom: 10px;
+}
+
+.imagem-produto-div {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.preço-produto-div {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 600;
+    padding-top: 5px;
+    display:flex;
+}
+
+@media (max-width: 1450px) {
+  .preço-produto-div {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 600;
+    padding-top: 5px;
+    height: 50px;
+    display:flex;
+    flex-direction: column;
+  }
+ }
+
+.caracteristicas-produto-div {
+    background-color: #EFF9FF;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #E6E6E6;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.caracteristicas-produto-divfinal {
+    background-color: #EFF9FF;
+    margin-right: 8px;
+    margin-left: 8px;
+    padding-top: 5px;
+    border-radius: 8px;
+    border: 2px solid #E6E6E6;
+}
+
+.separador-caracteristicas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.texto-caracteristicas {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.img-caracteristicas-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.img-caracteristicas {
+    margim: 0px;
+}
+
+.texto-caracteristicas-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado-caracteristicas-div {
+    background-color: #ffffff;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+
+.resultado-caracteristicas {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.links-div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 60px;
+}
+
+.ver-links-bnt {
+    width: 35%;
+    border-radius: 7px;
+    border: 1px solid #C4C4C4;
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.mais-informacoes-bnt {
+    width: 35%;
+    border-radius: 7px;
+    border: 1px solid #C4C4C4;
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.mais-informacoes-texto {
+    font-family: "Inter", sans-serif;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+
+
+.ver-links-texto {
+    font-family: "Inter", sans-serif;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.paginação {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    flex-direction: column;
+}
+
+.paginação-div-itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #C4C4C4;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.paginação-div-itens-atual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #C4C4C4;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #DBDBDB; ;
+}
+
+.paginação-div-itens:hover {
+    background-color: #DBDBDB;
+}
+
+.pagina-bnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.paginação-div {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proxima-pagina-bnt {
+    text-decoration: none;
+}
+
+.numero-pagina {
+    text-decoration: none;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+    font-family: "Inter", sans-serif;
+    color: #3D3D3D;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.img-desativada{
+    opacity: 0.5;
+}
+
+.pagina-atual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: "Inter", sans-serif;
+    color: #3D3D3D;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.paginação-escrita {
+    font-family: "Inter", sans-serif;
+    color: #393939;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.paginação-escrita-div {
+    padding-top: 10px;
+}

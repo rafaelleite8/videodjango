@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #F1F1F1;
+  font-family: 'Inter', sans-serif;
+  }
+
+.pagina-completa {
+    height: 100vh;
+}
+
+.areadoprincipal {
+    height: 100%;
+    margin-left: 130px;
+}
+
+.principalborda {
+    padding-top: 150px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 1645px) {
+.principalborda {
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: auto;
+    height: auto;
+}
+}
+
+.pagina-produto-unico {
+    position: fixed;
+    background-color: #ffffff;
+    width: 1000px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:10;
+    box-shadow: 0 0 10px 5px #C8C8C8;
+    border-radius: 15px;
+}
+
+.secao-fundo-preto {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    botton: 0;
+    left: 0;
+    z-index:9;
+}
+
+.mais-informacoes-div {
+    padding-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    display: none;
+    padding-bottom: 39px;
+
+}
+
+.conquistas-div {
+    display: none;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.conquista-img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+
+}
+
+.conquista-texto {
+    font-family: "Inter", sans-serif;
+    color: #4a4a4a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.informacoes-produto-texto {
+    font-family: "Inter", sans-serif;
+    color: #4a4a4a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.informacoes-produto-div {
+    padding-top: 10px;
+}
+
+.caracteristicas-pagina-div {
+    padding-top: 10px;
+}
+
+
+.caracteristicas-texto {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px;
+    padding-left: 20px;
+    margin-left: 10px;
+    background-color: #EFF9FF;
+    margin-bottom: 6px;
+    width: 215px;
+    border-radius: 5px;
+}
+
+.caracteristicas-pagina {
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px;
+    padding-left: 20px;
+    margin-left: 10px;
+    background-color: #EFF9FF;
+    margin-bottom: 6px;
+    width: 90%;
+    border-radius: 5px;
+
+}
+
+
+.caracteristicas-pagina-texto {
+    font-family: "Inter", sans-serif;
+    color: #4a4a4a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.lista-caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+    padding: 0;
+    margim: 0;
+}
+
+.lista-caracteristicas-pagina {
+    list-style-type: none;
+    padding: 0;
+    margim: 0;
+}
+
+
+
+
+
