@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Página de Produtos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/menu-lateral.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/filtros-pagina.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/produto-paginacao.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/categoria-palavra-order-filtros.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/filtros-avancados.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/paginacompleta.css">
+
+    <style>
+        .regras-texto {
+            font-family: "Inter", sans-serif;
+            color: #4a4a4a;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        .regras-div {
+            display: none;
+            margin-top: 15px;
+
+        }
+
+        .conquistas-produto-div {
+            padding-top: 10px;
+        }
+
+        .texto-regras-afiliacao {
+            display: flex;
+            font-family: "Inter", sans-serif;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+    </style>
+
+    <style>
+        .secao-regras-do-produto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 45px;
+            border-bottom: 2px solid #ededed;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .opcoes-informacoes-produto-regras {
+            cursor: pointer;
+            filter: grayscale(100%) brightness(0%);
+            opacity: 0.6;
+        }
+
+        .opcoes-informacoes-produto-conq {
+            cursor: pointer;
+            filter: grayscale(100%) brightness(0%);
+            opacity: 0.6;
+        }
+
+
+        .opcoes-informacoes-produto-produto {
+            cursor: pointer;
+            filter: grayscale(100%) brightness(0%);
+            opacity: 0.6;
+        }
+
+
+        .opcoes-informacoes-produto-pagina {
+            cursor: pointer;
+            filter: grayscale(100%) brightness(0%);
+            opacity: 0.6;
+        }
+
+
+        .informacoes-div {
+            display: none;
+        }
+
+        .caracteristicas-div {
+            display: none;
+        }
+
+    </style>
+
+
+</head>
+    <body>
+        <div class="pagina-completa">
+            <div class="menu-lateral">
+                <div class="borda-elemento">
+                    <nav class="menu-1">
+                        <div class="logo-principal">
+                            <a class="logo-nav" href="#">
+                                <img src="/static/produtos/img/logodapagina.png" height="70" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="todos-os-itens-menu">
+                            <ul class="itens-geral-menu">
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/conta/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/usuario.png" height="30">
+                                            <span class="texto-menu">Minha Conta</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                               <li class="itens-unicos-menu">
+                                   <a class="links-paginas-menu" href="/">
+                                       <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/ferramentas.png" height="30">
+                                            <span class="texto-menu">Ferramentas</span>
+                                       </div>
+                                   </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/suporte/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/suporte.png" height="30">
+                                            <span class="texto-menu">Suporte</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu" style="display:none">
+                                    <a class="links-paginas-menu" href="/sugestoes/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/sugestoes.png" height="30">
+                                            <span class="texto-menu">Sugestões</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/tutoriais/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/tutoriais.png" height="30">
+                                            <span class="texto-menu">Tutoriais</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="interacao-menu">
+                            <a class="icone-interacao-fechar" href="#">
+                                <img src="/static/produtos/img/fechar-menu.svg" height="20" alt="Logo">
+                            </a>
+                        </div>
+                    </nav>
+                 <nav class="menu-fechado">
+                        <div class="logo-principal">
+                            <a class="logo-nav" href="#">
+                                <img src="/static/produtos/img/ferramentas.png" height="40" alt="Logo">
+                            </a>
+                        </div>
+
+                        <div class="todos-os-itens-menu">
+                            <ul class="itens-geral-menu-fechado">
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/conta/">
+                                       <img src="/static/produtos/img/usuario.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/">
+                                        <img src="/static/produtos/img/ferramentas.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/suporte/">
+                                        <img src="/static/produtos/img/suporte.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado" style="display:none">
+                                    <a class='menu-fechado-links' href="/sugestoes/">
+                                        <img src="/static/produtos/img/sugestoes.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/tutoriais/">
+                                        <img src="/static/produtos/img/tutoriais.png" height="30">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="interacao-menu">
+                            <a class="icone-interacao-abrir" href="#">
+                                <img src="/static/produtos/img/abrir-menu.svg" height="20" alt="Logo">
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="areadoprincipal">
+                <div class="principalborda">
+                    <div class="conteudoprincipal">
+                        <div class="textofiltro">
+                            <span class="texto-garimpagem">Escolha de Produtos</span>
+                        </div>
+                        <div class="filtro-completo-div">
+                            <div class="filtro-completo">
+                                <div class="filtro-categoria-botao">
+                                    <div class="categorias-escolher">
+                                        <button class="categorias-selecao" id="categoria-fechada">
+                                            <div class="todascategoriasdiv">
+                                                <span class="texto-todascategorias">{{ categoriafiltrada }}</span>
+                                            </div>
+                                            <div>
+                                                <img class="img-categorias" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="pesquisa-escolher">
+                                        <input class="imput-palavra-chave" type="text" id="palavrachave-id" name="palavra-chave" placeholder="Digite uma palavra chave">
+                                    </div>
+                                    <div class="botao-filtrar">
+                                        <button class="clickfiltro">
+                                            <img src="/static/produtos/img/pesquisar.svg" height="30">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="filtro-avancado-secao">
+                                    <button class="botao-filtro-avançado">
+                                        <img src="/static/produtos/img/filtro.svg" width="30">
+                                        <span class="texto-filtros-avançados">Mais Filtros</span>
+                                    </button>
+                                </div>
+                                <div class="todas-categorias-div">
+                                    <div class="todas-categorias-divisao">
+                                        <div class="coluna-categoria">
+                                            <a class="link-categoria" id="Ambiente" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Ambiente</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Animais-e-Plantas" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Animais e plantas</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Desenvolvimento-Pessoal" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Desenvolvimento pessoal</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Design" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Design</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Direito" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Direito</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Empreendedorismo-Digital" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Empreendedorismo Digital</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Espiritualidade" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Espiritualidade</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Educação" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Educação</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Entretenimento" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Entretenimento</span>
+                                                    </div>
+                                                </a>
+
+                                        </div>
+                                        <div class="coluna-categoria">
+                                            <a class="link-categoria" id="Finanças" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Finanças</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Gastronomia" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Gastronomia</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Geral" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Geral</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Hobbies" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Hobbies</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Idiomas" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Idiomas</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Internet" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Internet</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Literatura" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Literatura</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Moda-e-Beleza" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Moda e Beleza</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Música-e-Arte" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Música e Arte</span>
+                                                    </div>
+                                                </a>
+                                        </div>
+                                        <div class="coluna-categoria">
+
+                                            <a class="link-categoria" id="Relacionamentos" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Relacionamentos</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Negócios-e-Carreira" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Negócios e Carreira</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Prédio-e-Construções" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Prédio e Construções</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Saúde-e-Esporte" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Saúde e Esporte</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Sexualidade" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Sexualidade</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Software" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Software</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Tecnologia-da-Informação" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Tecnologia da Informação</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="link-categoria" id="Todas-as-Categorias" href="javascript:void(0)">
+                                                <div class="categorias-unicas">
+                                                    <span>Todas as Categorias</span>
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secao-resultado-ordenado">
+                            <div class="resultado-filtro">
+                                <div class="resultado-categorias">
+                                    <span class="resultado-categorias-texto">{{ categoriafiltrada }}</span>
+                                </div>
+                                <div class="numero-resultados">
+                                    {% if numerodeprodutos is None  %}
+                                    <span class="numero-resultados-texto">{{ numeroprt }}</span>
+                                    {% else %}
+                                    {% for dado in numerodeprodutos %}
+                                    <span class="numero-resultados-texto">{{ dado.dados }}</span>
+                                    {% endfor %}
+                                    {% endif %}
+
+                                    <span class="resultado-texto">resultados</span>
+                                </div>
+                            </div>
+                            <div class="ordenar-filtro">
+                                <div class="div-ordenar">
+                                    <div class="ordenar-por-div">
+                                        <span class="ordenar-por-text">Ordenar Por</span>
+                                    </div>
+                                    <div class="ordenarfiltro-div">
+                                        <button class="ordenar-filtro-bnt" id="ordenar-fechado">
+                                            <span class="text-ordenar">{{ ordenarpor }}</span>
+                                            <img class="img-ordenar" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                        </button>
+                                    </div>
+                                    <div class="ordenar-filtro-lista-secao">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros">
+                                                <a class="link-ordenar" id="escolha-uma-opçao" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="link-ordenar" id="mais-quentes" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Mais Quentes</span>
+                                                    </div>
+                                                </a>
+                                                <a class="link-ordenar" id="mais-queridos" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Mais Queridos</span>
+                                                    </div>
+                                                </a>
+                                                <a class="link-ordenar" id="avaliacoes-recentes" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Avaliações Recentes</span>
+                                                    </div>
+                                                </a>
+                                                <a class="link-ordenar" id="mais-avaliados" href="javascript:void(0)">
+                                                    <div class="categorias-unicas">
+                                                        <span>Mais Avaliados</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todos-filtros-aplicados">
+                            <div class="filtros-aplicados">
+                                {% if categoriafiltrada == 'Todas as Categorias' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ categoriafiltrada }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparcategoriaproduto()">
+                                </div>
+                                {% endif %}
+
+                                {% if palavrachaveproduto == None or palavrachaveproduto == 'none' or palavrachaveproduto == '' %}
+                                {% else %}
+                                    <div class="div-filtros-usados">
+                                        <span class="filtros-usados-texto">{{ palavrachaveproduto }}</span>
+                                        <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparpalavrachaveproduto()">
+                                    </div>
+                                {% endif %}
+
+                                {% if paginadoproduto == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ paginadoproduto }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparpaginadoproduto()">
+                                </div>
+                                {% endif %}
+
+                                {% if produtocomvideo == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ produtocomvideo }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparprodutocomvideo()">
+                                </div>
+                                {% endif %}
+
+                                {% if filtrocomissionamentoproduto == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ filtrocomissionamentoproduto }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparfiltrocomissionamentoproduto()">
+                                </div>
+                                {% endif %}
+
+                                {% if moedadoproduto == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ moedadoproduto }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparmoedadoproduto()">
+                                </div>
+                                {% endif %}
+
+                                {% if avaliacoesproduto == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ avaliacoesproduto }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparavaliacoesproduto()">
+                                </div>
+                                {% endif %}
+
+                                {% if tipodeafiliacao == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ tipodeafiliacao }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limpartipodeafiliacao()">
+                                </div>
+                                {% endif %}
+
+                                {% if canalyoutube == 'Escolha Uma Opção' %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">{{ canalyoutube }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparcanalyoutube()">
+                                </div>
+                                {% endif %}
+
+                                {% if tempminima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Temperatura Minima - {{ tempminima }}°</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limpartempminima()">
+                                </div>
+                                {% endif %}
+
+                                {% if tempmaxima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Temperatura Máxima - {{ tempmaxima }}°</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limpartempmaxima()">
+                                </div>
+                                {% endif %}
+
+                                {% if comissaominima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Comissão Minima - {{ comissaominima }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparcomissaominima()">
+                                </div>
+                                {% endif %}
+
+                                {% if comissaomaxima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Comissão Máxima - {{ comissaomaxima }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparcomissaomaxima()">
+                                </div>
+                                {% endif %}
+
+                                {% if precominimo == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Preço Mínimo - {{ precominimo }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparprecominimo()">
+                                </div>
+                                {% endif %}
+
+                                {% if precomaximo == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Preço Máximo - {{ precomaximo }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparprecomaximo()">
+                                </div>
+                                {% endif %}
+
+                                {% if porccomissaominima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">% de Comissão Minima - {{ porccomissaominima }}%</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparporccomissaominima()">
+                                </div>
+                                {% endif %}
+
+                                {% if porccomissaomaxima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">% de Comissão Máxima - {{ porccomissaomaxima }}%</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparporccomissaomaxima()">
+                                </div>
+                                {% endif %}
+
+                                {% if notaprodutominima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Nota do Produto Mínima - {{ notaprodutominima }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparnotaprodutominima()">
+                                </div>
+                                {% endif %}
+
+                                {% if avaliacaominima == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Avaliação Mínima - {{ avaliacaominima }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparavaliacaominima()">
+                                </div>
+                                {% endif %}
+
+                                {% if tamanhocanminimo == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Tamanho Canal Mínimo - {{ tamanhocanminimo }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limpartamanhocanminimo()">
+                                </div>
+                                {% endif %}
+
+                                {% if tamanhocanmaximo == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Tamanho Canal Máximo - {{ tamanhocanmaximo }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limpartamanhocanmaximo()">
+                                </div>
+                                {% endif %}
+
+                                {% if conquistasdoproduto == None %}
+                                {% else %}
+                                <div class="div-filtros-usados">
+                                    <span class="filtros-usados-texto">Conquistas - {{ conquistasdoproduto }}</span>
+                                    <img class="img-filtros-usados" src="/static/produtos/img/x.png" width="10px" onclick="limparconquistasdoproduto()">
+                                </div>
+                                {% endif %}
+                            </div>
+                            <button class="limpar-filtros-usados">
+                                Limpar Filtros
+                            </button>
+                        </div>
+                        <div class="secao-produtos-unicos">
+                            <div class="produto-unicos-div" id="todos-os-produtos">
+                                {% for produto in produtos %}
+                                <div class="produto">
+                                    <div>
+                                        <div class="imagem-texto-div">
+                                            <div class="imagem-produto-div">
+                                                <img class="img-produto" src="{{ produto.imagem_do_produto }}" width="220px" height="220px" >
+                                            </div>
+                                            <div class="informaçoes-produto-div">
+                                                <div class="nome-produto-div">
+                                                    <span class="nome-produto">{{ produto.nome}}</span>
+                                                </div>
+                                                <div class="seção-avaliação-temperatura">
+                                                    <div class="avaliaçãoesatisfação-div">
+                                                        <span class="nota-produto-texto">{{ produto.nota_do_produto}}</span>
+                                                        <img class="estrela-img" src="/static/produtos/img/estrela.svg" width="20px">
+                                                        <span class="avaliações-texto">({{produto.numero_de_avaliacoes}})</span>
+                                                    </div>
+                                                    <div class="temperatura-div">
+                                                        <img src="/static/produtos/img/grau.svg" width="15px">
+                                                        <span class="grau-texto">{{ produto.grau_do_produto }}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="seção-comissão-preço">
+                                                    <div class="comissao-ate-div">
+                                                        <span>Comissão de até</span>
+                                                    </div>
+                                                    <div class="comissao-produto-div">
+                                                        <span>{{ produto.moeda }} {{produto.comissao}},00</span>
+                                                    </div>
+                                                    <div class="preço-produto-div" style="display:flex; flex-wrap: wrap;">
+                                                        <div style="padding-right: 5px;">
+                                                            <span>Preço máximo:</span>
+                                                        </div>
+                                                        <div>
+                                                           <span>{{ produto.moeda }} {{produto.preco|floatformat:"0"}},00</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="secao-links-caracteristicas">
+                                            <div class="seção-caracteristicas-produto">
+                                                <div class="separador-caracteristicas">
+                                                    <div class="caracteristicas-produto-div">
+                                                        <div class="img-caracteristicas-div">
+                                                            <img class="img-caracteristicas" src="/static/produtos/img/produto/video.png" width='40px' height="40">
+                                                        </div>
+                                                        <div class="texto-caracteristicas-div">
+                                                            <span class="texto-caracteristicas">Video de Vendas: </span>
+                                                        </div>
+                                                        <div class="resultado-caracteristicas-div">
+                                                            <span class="resultado-caracteristicas">{{produto.video_de_venda}}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="caracteristicas-produto-div">
+                                                        <div class="img-caracteristicas-div">
+                                                            <img class="img-caracteristicas" src="/static/produtos/img/produto/comentario.png" width='40px' height="40">
+                                                        </div>
+                                                        <div class="texto-caracteristicas-div">
+                                                            <span class="texto-caracteristicas">Ultima Avaliação:</span>
+                                                        </div>
+                                                        <div class="resultado-caracteristicas-div">
+                                                            {% if produto.avaliacao_do_produto == 0 %}
+                                                                    <span class="resultado-caracteristicas">Avaliado esse mês</span>
+                                                            {% elif produto.avaliacao_do_produto == 1 %}
+                                                                    <span class="resultado-caracteristicas">Avaliado mês passado</span>
+                                                            {% elif produto.avaliacao_do_produto == 999 %}
+                                                                <span class="resultado-caracteristicas">Avaliação oculta</span>
+                                                            {% else %}
+                                                                <span class="resultado-caracteristicas">{{produto.avaliacao_do_produto}} meses</span>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                    <div class="caracteristicas-produto-div">
+                                                        <div class="img-caracteristicas-div">
+                                                            <img class="img-caracteristicas" src="/static/produtos/img/produto/youtube.png" width='40px' height="40">
+                                                        </div>
+                                                        <div class="texto-caracteristicas-div">
+                                                            <span class="texto-caracteristicas">Canal no Youtube:</span>
+                                                        </div>
+                                                        <div class="resultado-caracteristicas-div">
+                                                            {% if produto.inscritos_youtube == '0.00' %}
+                                                                <span class="resultado-caracteristicas">Sem Canal</span>
+                                                            {% elif produto.inscritos_youtube is None or produto.inscritos_youtube == "" %}
+                                                                <span class="resultado-caracteristicas">Sem Canal</span>
+                                                            {% else %}
+                                                                <span class="resultado-caracteristicas">{{produto.inscritos_youtube }}</span>
+                                                            {% endif %}
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="caracteristicas-produto-div">
+                                                        <div class="img-caracteristicas-div">
+                                                            <img class="img-caracteristicas" src="/static/produtos/img/produto/website.png" width='40px' height="40">
+                                                        </div>
+                                                        <div class="texto-caracteristicas-div">
+                                                            <span style="font-size:14px" class="texto-caracteristicas">Página de Vendas: </span>
+                                                        </div>
+                                                        <div class="resultado-caracteristicas-div">
+                                                            <span class="resultado-caracteristicas">{{produto.pagina_do_produto}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="links-div">
+                                                <button class="ver-links-bnt">
+                                                    <span class="ver-links-texto">Ver Links</span>
+                                                    <img class="icone-links" src="/static/produtos/img/seta-para-baixo.svg" width="12px" >
+                                                </button>
+                                                <button class="mais-informacoes-bnt">
+                                                    <span class="mais-informacoes-texto">Mais Informações</span>
+                                                    <img class="icone-mais-informacoes" src="/static/produtos/img/seta-para-baixo.svg" width="12px" >
+                                                </button>
+                                            </div>
+                                            <div class="div-links-produtos">
+                                                <a class="linksproduto" href="https://app.hotmart.com{{ produto.link_produto }}" target="_blank" >
+                                                    <span class="links-texto">Afiliação na Hotmart</span>
+                                                </a>
+                                                {% if produto.inscritos_youtube == '0.00' %}
+                                                {% elif produto.inscritos_youtube is None or produto.inscritos_youtube == "" %}
+                                                {% else %}
+                                                <a class="linksproduto" style="background-color: darkred;" href="{{ produto.link_youtube }}" target="_blank">
+                                                    <span class="links-texto">Canal do Youtube</span>
+                                                </a>
+                                                {% endif %}
+
+                                                <a class="linksproduto" style="background-color: darkcyan;" href="{{ produto.url_do_site }}" target="_blank">
+                                                <span class="links-texto">Página de Vendas</span>
+                                            </a>
+                                            </div>
+                                            <div class="mais-informacoes-div">
+                                                <div class="regras-produto-div">
+                                                    <div class="secao-regras-do-produto">
+                                                        <div class="regras-produto-secao">
+                                                            <span class="regras-texto">Regras de Afiliação</span>
+                                                        </div>
+                                                        <img class="opcoes-informacoes-produto-regras" src="/static/produtos/img/seta-para-baixo.svg" width="15px">
+                                                    </div>
+                                                    <div class="regras-div">
+                                                       <span class="texto-regras-afiliacao">{{ produto.descricao_produto }}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="conquistas-produto-div">
+                                                    <div class="secao-regras-do-produto">
+                                                        <div class="conquistas-produto-secao">
+                                                       <span class="conquista-texto">Conquistas</span>
+                                                    </div>
+                                                        <img class="opcoes-informacoes-produto-conq" src="/static/produtos/img/seta-para-baixo.svg" width="15px">
+                                                    </div>
+                                                    <div class="conquistas-div">
+                                                        {% if 'badge-7/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/9.png">
+                                                        {% endif %}
+                                                        {% if 'badge-9/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/3.png">
+                                                        {% endif %}
+                                                        {% if 'badge-10/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/15.png">
+                                                        {% endif %}
+                                                        {% if 'badge-11/' in produto.conquista %}
+                                                        <img class="conquista-img" class="conquista-img" src="/static/produtos/img/conquistas/2.png">
+                                                        {% endif %}
+                                                        {% if 'badge-14/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/4.png">
+                                                        {% endif %}
+                                                        {% if 'badge-15/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/14.png">
+                                                        {% endif %}
+                                                        {% if 'badge-16/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/1.png">
+                                                        {% endif %}
+                                                        {% if 'badge-19/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/5.png">
+                                                        {% endif %}
+                                                        {% if 'badge-20/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/10.png">
+                                                        {% endif %}
+                                                        {% if 'badge-21/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/11.png">
+                                                        {% endif %}
+                                                        {% if 'badge-22/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/7.png">
+                                                        {% endif %}
+                                                        {% if 'badge-23/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/12.png">
+                                                        {% endif %}
+                                                        {% if 'badge-24/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/13.png">
+                                                        {% endif %}
+                                                        {% if 'badge-25/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/8.png">
+                                                        {% endif %}
+                                                        {% if 'badge-19/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/6.png">
+                                                        {% endif %}
+                                                        {% if 'badge-8/' in produto.conquista %}
+                                                        <img class="conquista-img" src="/static/produtos/img/conquistas/16.png">
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                                <div class="informacoes-produto-div">
+                                                    <div class="secao-regras-do-produto">
+                                                        <span class="informacoes-produto-texto">Informações do Produto</span>
+                                                        <img class="opcoes-informacoes-produto-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15px">
+                                                    </div>
+
+                                                    <div class="informacoes-div">
+                                                        <ul class="lista-caracteristicas">
+                                                            {% for iten in produto.caracteristica_produto %}
+                                                            <li class="caracteristicas-texto">
+                                                                {{ iten }}
+                                                            </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                {% if produto.caracteristicas_pagina_hotmart != null %}
+                                                <div class="caracteristicas-pagina-div">
+                                                    <div class="secao-regras-do-produto">
+                                                        <span class="caracteristicas-pagina-texto">Informações da Página da Hotmart</span>
+                                                        <img class="opcoes-informacoes-produto-pagina" src="/static/produtos/img/seta-para-baixo.svg" width="15px" >
+                                                    </div>
+                                                    <div class="caracteristicas-div">
+                                                        <ul class="lista-caracteristicas-pagina">
+                                                        {% for iten in produto.caracteristicas_pagina_hotmart %}
+                                                        <li class="caracteristicas-pagina">
+                                                            {{ iten }}
+                                                        </li>
+                                                        {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                {% else %}
+
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div>
+                                <div class="paginação">
+                                    <div class="paginação-div">
+                                        {% if produtos.has_previous %}
+
+                                            <a class="voltar-pagina-bnt" href="javascript:void(0)">
+                                                <div class="paginação-div-itens">
+                                                    <img src="/static/produtos/img/fechar-menu.svg" width="20px" height="20px">
+                                                </div>
+                                            </a>
+
+                                            <a class="voltar-pagina-bnt" href="javascript:void(0)">
+                                                <div class="paginação-div-itens">
+                                                    <span class="numero-pagina">{{produtos.previous_page_number}}</span>
+                                                </div>
+                                            </a>
+
+                                        {% else %}
+
+                                            <div class="paginação-div-itens">
+                                                <img class="img-desativada" src="/static/produtos/img/fechar-menu.svg" width="20px" height="20px">
+                                            </div>
+
+                                        {% endif %}
+
+                                            <div class="paginação-div-itens-atual">
+                                                <span class="pagina-atual">{{ produtos.number }}</span>
+                                            </div>
+
+                                        {% if produtos.has_next %}
+                                            <a class="proxima-pagina-bnt" href="javascript:void(0)">
+                                                <div class="paginação-div-itens">
+                                                    <span class="numero-pagina">{{ produtos.next_page_number }}</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="proxima-pagina-bnt" href="javascript:void(0)">
+                                                <div class="paginação-div-itens">
+                                                    <img src="/static/produtos/img/abrir-menu.svg" width="20px" height="20px">
+                                                </div>
+                                            </a>
+
+                                        {% else %}
+
+                                            <div class="paginação-div-itens">
+                                                <img class="img-desativada" src="/static/produtos/img/abrir-menu.svg" width="20px" height="20px">
+                                            </div>
+
+                                        {% endif %}
+                                    </div>
+                                    <div class="paginação-escrita-div">
+
+                                        {% if numeropaginas is None %}
+                                        <span class="paginação-escrita">Página {{ produtos.number }} de {{ produtos.paginator.num_pages }} </span>
+                                        {% else %}
+                                            {% for dado in numeropaginas %}
+                                                <span class="paginação-escrita">Página {{ produtos.number }} de {{ dado.dados }} </span>
+                                            {% endfor %}
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filtro-avançado">
+                <button class="x-filtro-avançado">
+                    <img src="/static/produtos/img/x.png" width="15">
+                </button>
+                <div class="borda-filtro-avançado">
+                    <div class="filtros-avançados-div-painel">
+                        <span class="filtros-avançados-texto">Filtros Avançados</span>
+                        <div class="divisor-filtro-div">
+                            <hr class="divisor-filtro">
+                        </div>
+                    </div>
+                    <div class="primeiros-filtro-div">
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado">Temperatura:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number"  class='filtro-avancado-itens'  placeholder="Mínima" id="temperaturaminima" oninput="verificarTemperaturaMinima()">
+                                </div>
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Máxima" id="temperaturamaxima" oninput="verificarTemperaturaMaxima()" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado">Comissão:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Mínima" id="comissaominima" oninput="verificarComissaoMinima()" >
+                                </div>
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Máxima" id="comissaomaxima" oninput="verificarComissaoMaxima()" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado">Preço do Produto:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Mínimo" id="precominimo" oninput="verificarPrecoMinimo()" >
+                                </div>
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Máximo" id="precomaximo" oninput="verificarPrecoMaximo()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado">% de Comissão:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Mínima" id="porc-comissaominima" oninput="verificarPorcComissaoMinima()">
+                                </div>
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens'  placeholder="Máxima" id="porc-comissaomaxima" oninput="verificarPorcComissaoMaxima()" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="primeiros-filtro-div2">
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado">Nota do Produto:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens-unico'  placeholder="Mínima" id="notadoproduto" oninput="verificarNotaProduto()" >
+                            </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Número de Avaliações:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                    <input type="number" class='filtro-avancado-itens-unico'  placeholder="Mínima" id="numero-avaliacoes" oninput="verificarNumeroAvaliacoes()" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Página do Produto:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <button class="bnt-selecao-pagina" id="lista-pagina-fechado">
+                                        <span id="selecao-pagina" class="selecao-filtro">{{ paginadoproduto }}</span>
+                                        <img class="img-lista-paginas" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                    </button>
+                                    <div class="lista-pagina-produto">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros" id="op1">
+                                                <a class="itens-filtros-link" id="todas-as-paginas" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="pagina-propria" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Página Própria</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="pagina-hotmart" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Página da Hotmart</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Página com vídeo:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro">
+                                    <button class="bnt-selecao-video" id="lista-video-fechado">
+                                        <span class="selecao-filtro" id="selecao-video">{{ produtocomvideo }}</span>
+                                        <img class="img-video-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                    </button>
+                                    <div class="lista-video-produto">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros" id="op2">
+                                                <a class="itens-filtros-link" id="paginas-comsemvideo" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="pagina-comvideo" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Com Video</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="pagina-semvideo" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Sem Video</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                    <div class="primeiros-filtro-div2">
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Comissionamento:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro2">
+                                    <button class="bnt-selecao-comissionamento" id="lista-comissionamento-fechado">
+                                        <span class="selecao-filtro" id="selecao-comissionamento">{{ filtrocomissionamentoproduto }}</span>
+                                        <img class="img-comissionamento-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                    </button>
+                                    <div class="lista-comissionamento-produto">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros" id="op3">
+                                                <a class="itens-filtros-link" id="todos-comissionamento" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="ultimo-clique" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Último Clique</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="primeiro-clique" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Primeiro Clique</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Moeda:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro2">
+                                    <button class="bnt-selecao-moeda" id="lista-moeda-fechado">
+                                        <span class="selecao-filtro" id="selecao-moeda">{{ moedadoproduto }}</span>
+                                        <img class="img-moeda-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                    </button>
+                                    <div class="lista-moeda-produto">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros" id="op4">
+                                                <a class="itens-filtros-link" id="todas-as-moedas" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="moeda-real" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Real</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="moeda-dolar" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Dolar</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="moeda-euro" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Euro</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Última Avaliação:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro2">
+                                    <button class="bnt-selecao-ultimaavaliacao" id="lista-ultimaavaliacao-fechado">
+                                        <span class="selecao-filtro" id="selecao-ultimaavaliacao">{{ avaliacoesproduto }}</span>
+                                        <img class="img-ultimaavaliacao-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                    </button>
+                                    <div class="lista-ultimaavaliacao-produto">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros-especial" id="op5">
+                                                <a class="itens-filtros-link" id="qualquerdataavaliada" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="avaliadaessemes" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Avaliado Esse Mês</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="ultimos3meses" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Até 3 Mêses</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="ultimos6meses" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Até 6 Mêses</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="ultimos12meses" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Até 12 Mêses</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="ultimos24meses" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Até 24 Mêses</span>
+                                                    </div>
+                                                </a>
+
+                                                <a class="itens-filtros-link" id="avaliacoesocultas" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Avaliações Ocultas</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filtro-n1">
+                            <span class="texto-filtro-avançado2">Tipo de Afiliação:</span>
+                            <div class="input-div-filtro">
+                                <div class="campo-filtro2">
+                                    <button class="bnt-selecao-tipoafiliacao" id="lista-tipodeafiliacao-fechado">
+                                        <span class="selecao-filtro" id="selecao-tipoafiliacao">{{ tipodeafiliacao }}</span>
+                                        <img class="img-tipodeafiliacao-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                    </button>
+                                    <div class="lista-tipoafiliacao-produto">
+                                        <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros" id="op6">
+                                                <a class="itens-filtros-link" id="todos-os-tipos" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="afiliacaorapida" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Com um Clique</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="afiliacaoaprovacao" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Por Aprovação</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                    <div class="ultimos-filtros-div">
+                        <div class="ultimos-filtros">
+                            <div class="filtro-n1">
+                                <span class="texto-filtro-avançado2">Selecione as Conquistas do Produto:</span>
+                                <div class="todos-as-conquistas-div">
+                                    <div class="primeira-coluna">
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-1-fechada">
+                                                <img class="imagem-check" id='conquista1' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/3.png" width="40">
+                                            <span class="texto-conquistas">
+                                                Vendedor(a) | Iniciante
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-2-fechada">
+                                                <img class="imagem-check" id='conquista2' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/2.png" width="40">
+                                            <span class="texto-conquistas">
+                                                Vendedor(a) | Triunfante
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-5-fechada">
+                                                <img class="imagem-check" id='conquista5' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/5.png" width="40">
+                                            <span class="texto-conquistas">
+                                                40°
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-6-fechada">
+                                                <img class="imagem-check" id='conquista6' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/7.png" width="40">
+                                            <span class="texto-conquistas">
+                                                70°
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-3-fechada">
+                                                <img class="imagem-check" id='conquista3' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/4.png" width="40">
+                                            <span class="texto-conquistas">
+                                                Comissão | Iniciante
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox"  id="conq-4-fechada">
+                                                <img class="imagem-check" id='conquista4' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/1.png" width="40">
+                                            <span class="texto-conquistas">
+                                                Comissão | Triunfante
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-7-fechada">
+                                                <img class="imagem-check" id='conquista7' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/8.png" width="40">
+                                            <span class="texto-conquistas">
+                                                100°
+                                            </span>
+                                        </div>
+                                        <div class="conquinta-selecao">
+                                            <button class="button-checkbox" id="conq-8-fechada">
+                                                <img class="imagem-check" id='conquista8' src="/static/produtos/img/conquistas/check.png" width="20px" height="20px">
+                                            </button>
+                                            <img class="img-ordenar" src="/static/produtos/img/conquistas/6.png" width="40">
+                                            <span class="texto-conquistas">
+                                                Ninja
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filtro-n1">
+                                <span class="texto-filtro-avançado2">Canal no Youtube:</span>
+                                <div class="input-div-filtro">
+                                    <div class="campo-filtro">
+                                        <button class="bnt-selecao-canalyoutube" id="lista-canalyoutube-fechado">
+                                            <span class="selecao-filtro" id="selecao-canalyoutube" >{{ canalyoutube }}</span>
+                                            <img class="img-canalyoutube-produto" src="/static/produtos/img/seta-para-baixo.svg" width="15">
+                                        </button>
+                                        <div class="lista-canalyoutube-produto">
+                                            <div class="ordenar-filtro-div">
+                                            <div class="coluna-filtros" id="op7">
+                                                <a class="itens-filtros-link" id="todas-canais" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Escolha Uma Opção</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="com-canal-youtube" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Com Canal</span>
+                                                    </div>
+                                                </a>
+                                                <a class="itens-filtros-link" id="sem-canal-youtube" href="javascript:void(0)">
+                                                    <div class="itens-filtro">
+                                                        <span>Sem Canal</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tamanho-canal-filtro" id="tamanhocanal-desativado">
+                                    <span class="texto-filtro-avançado2">Qnt. de inscritos no Canal:</span>
+                                    <div class="input-div-filtro-inscritos">
+                                        <div class="campo-filtro">
+                                            <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                            <input type="number" class='filtro-avancado-itens'  placeholder="Mínimo" id="tamanhodocanalminimo" oninput="verificarTamanhoCanalMinimo()" >
+                                        </div>
+                                        <div class="campo-filtro">
+                                            <img class="img-filtro-avancado" src="/static/produtos/img/input2.svg" alt="Ícone">
+                                            <input type="number" class='filtro-avancado-itens'  placeholder="Máximo" id="tamanhodocanalmaximo" oninput="verificarTamanhoCanalMaximo()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div>
+                </div>
+
+            </div>
+        </div>
+                    <div class="botoes-filtros">
+                        <div>
+                            <button class="bnt-tutoriais">
+                                <img src="/static/produtos/img/tutoriais.png" width="30px">
+                                <span class="text-tutoriais">Tutoriais</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="bnt-limpar-filtros">
+                                <span class="text-limpar-filtros">Limpar filtros</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="bnt-aplicar-filtros">
+                                <span class="text-aplicar-filtros">Aplicar Filtros</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/static/produtos/js/paginaprincipal.js"></script>
+        <script src="/static/produtos/js/categoria.js"></script>
+        <script src="/static/produtos/js/menu.js"></script>
+        <script src="/static/produtos/js/filtros-avançados.js"></script>
+        <script>
+            const bntpreencherfiltrosavancados = document.querySelector('.botao-filtro-avançado')
+bntpreencherfiltrosavancados.addEventListener('click', preencherfiltros)
+function preencherfiltros() {
+    verificarnumfiltros('temperaturaminima', {{ tempminima|default:"null" }})
+    verificarnumfiltros('temperaturamaxima', {{ tempmaxima|default:"null" }})
+    verificarnumfiltros('comissaominima', {{ comissaominima|default:"null" }})
+    verificarnumfiltros('comissaomaxima', {{ comissaomaxima|default:"null" }})
+    verificarnumfiltros('precominimo', {{ precominimo|default:"null" }})
+    verificarnumfiltros('precomaximo', {{ precomaximo|default:"null" }})
+    verificarnumfiltros('porc-comissaominima', {{ porccomissaominima|default:"null" }})
+    verificarnumfiltros('porc-comissaomaxima', {{ porccomissaomaxima|default:"null" }})
+    verificarnumfiltros('notadoproduto', {{ notaprodutominima|default:"null" }})
+    verificarnumfiltros('numero-avaliacoes', {{ avaliacaominima|default:"null" }})
+    verificarnumfiltros('tamanhodocanalminimo', {{ tamanhocanminimo|default:"null" }})
+    verificarnumfiltros('tamanhodocanalmaximo', {{ tamanhocanmaximo|default:"null" }})
+    canalnoyoutubeelemento = '{{ canalyoutube }}'
+    if (canalnoyoutubeelemento == 'Com Canal') {
+        divtamanhodoCanal = document.querySelector('.tamanho-canal-filtro')
+        divtamanhodoCanal.style.display = "flex"
+    }
+    let conquistas = '{{ conquistasdoproduto }}'
+    if (conquistas.match('1')) {
+        let botao = document.getElementById('conq-1-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('2')) {
+        let botao = document.getElementById('conq-2-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('3')) {
+        let botao = document.getElementById('conq-3-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('4')) {
+        let botao = document.getElementById('conq-4-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('5')) {
+        let botao = document.getElementById('conq-5-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('6')) {
+        let botao = document.getElementById('conq-6-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('7')) {
+        let botao = document.getElementById('conq-7-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+    }
+    if (conquistas.match('8')) {
+        let botao = document.getElementById('conq-8-fechada')
+        botao.id = botao.id.replace("fechada", "aberta")
+        let imagem = botao.querySelector("img")
+        imagem.style.display = "flex"
+        }
+    }
+
+
+function verificarnumfiltros(elementoid, valorDjango) {
+   if (valorDjango === null) {
+
+   }
+   else {
+        elemento = elementoid
+        elementoid = document.getElementById(elementoid)
+        elementoid.value = valorDjango
+   } }
+        </script>
+        <script>
+
+
+
+
+            let todasAsSeccoesMaisInformacoes = document.querySelectorAll('.produto')
+            todasAsSeccoesMaisInformacoes.forEach(secao => {
+                let iconeregras = secao.querySelector('.opcoes-informacoes-produto-regras')
+                let iconeconq = secao.querySelector('.opcoes-informacoes-produto-conq')
+                let iconeproduto = secao.querySelector('.opcoes-informacoes-produto-produto')
+                let iconepagina = secao.querySelector('.opcoes-informacoes-produto-pagina')
+
+                iconeregras.addEventListener('click', function() {
+                    let iconeimagem = secao.querySelector('.opcoes-informacoes-produto-regras')
+                    let secaoconquistamaisinformacao = secao.querySelector('.regras-div')
+
+                    if (secaoconquistamaisinformacao.style.display == 'flex') {
+                        secaoconquistamaisinformacao.style.display = 'none'
+                        iconeimagem.src = '/static/produtos/img/seta-para-baixo.svg'
+                    }
+
+                    else {
+                        secaoconquistamaisinformacao.style.display = 'flex'
+                        iconeimagem.src = '/static/produtos/img/seta-para-cima.svg'
+                    }
+                })
+
+
+                iconeconq.addEventListener('click', function() {
+                    let iconeimagem = secao.querySelector('.opcoes-informacoes-produto-conq')
+                    let secaoconquistamaisinformacao = secao.querySelector('.conquistas-div')
+
+                    if (secaoconquistamaisinformacao.style.display == 'flex') {
+                        secaoconquistamaisinformacao.style.display = 'none'
+                        iconeimagem.src = '/static/produtos/img/seta-para-baixo.svg'
+                    }
+
+                    else {
+                        secaoconquistamaisinformacao.style.display = 'flex'
+                        iconeimagem.src = '/static/produtos/img/seta-para-cima.svg'
+                        }
+                    })
+
+                iconeproduto.addEventListener('click', function() {
+                    let iconeimagem = secao.querySelector('.opcoes-informacoes-produto-produto')
+                    let secaoconquistamaisinformacao = secao.querySelector('.informacoes-div')
+
+                    if (secaoconquistamaisinformacao.style.display == 'flex') {
+                        secaoconquistamaisinformacao.style.display = 'none'
+                        iconeimagem.src = '/static/produtos/img/seta-para-baixo.svg'
+                    }
+
+                    else {
+                        secaoconquistamaisinformacao.style.display = 'flex'
+                        iconeimagem.src = '/static/produtos/img/seta-para-cima.svg'
+                    }
+                    })
+
+
+                try {
+                    iconepagina.addEventListener('click', function() {
+                        let iconeimagem = secao.querySelector('.opcoes-informacoes-produto-pagina')
+                        let secaoconquistamaisinformacao = secao.querySelector('.caracteristicas-div')
+
+                        if (secaoconquistamaisinformacao.style.display == 'flex') {
+                            secaoconquistamaisinformacao.style.display = 'none'
+                            iconeimagem.src = '/static/produtos/img/seta-para-baixo.svg'
+                        }
+
+                        else {
+                            secaoconquistamaisinformacao.style.display = 'flex'
+                            iconeimagem.src = '/static/produtos/img/seta-para-cima.svg'
+                        }
+                        })
+                        }
+                catch (erro) {
+
+                }
+
+            })
+        </script>
+    </body>
+</html>

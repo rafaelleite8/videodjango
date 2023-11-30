@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Login</title>
+  <style>
+
+body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+.container {
+  width: 500px;
+  height: 550px;
+  color: #000000;
+  border-radius: 10px;
+  padding: 70px;
+  box-sizing: border-box;
+  box-shadow: 0 0 12px 1px #C8C8C8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.forgot-password {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #848484;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+}
+
+.input-formulario {
+  width: 80%;
+  padding: 15px;
+  color: #000000;
+  border: 1px solid #C8C8C8;
+  outline: none;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  padding-left: 60px;
+}
+
+.input-formulario:focus {
+  border: 1px solid blue;
+}
+
+.campo-senha {
+position: relative;
+}
+
+.form-group input::placeholder {
+  color: #D4D4D1;
+}
+
+.btn {
+  width: 100%;
+  background-color: #327CCB;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #0037A8;
+}
+
+.icones-login {
+    width: 21px;
+    height: auto;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+
+.icones-login-2 {
+    width: 21px;
+    height: auto;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+}
+
+  .erros-div {
+      margin-top: 20px;
+      padding: 5px;
+
+
+  }
+  .erro-usuario {
+      margin-top: 20px;
+      font-family: "inter", sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #EF0000;
+}
+
+.cadastro-text {
+    font-family: "inter", sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    color: #000000;
+
+}
+
+.sucessosenha-usuario {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: darkgreen;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="cadastro-text">Cadastre um Usuário</span>
+    <form action="{% url 'cadastro' %}" method="post"> {% csrf_token %}
+      <div class="campo-senha">
+        <img class="icones-login" src="/static/autenticacao/img/usuario.svg" alt="Ícone"></p>
+        <input class='input-formulario'  placeholder="Digite o seu Email" type="Email" id="email_login" name="email">
+      </div>
+      <div class="campo-senha">
+        <img class="icones-login-2" src="/static/autenticacao/img/cadeado.svg" alt="Ícone"></p>
+        <input class='input-formulario' placeholder="Digite a sua Senha:" id="password" name="senha" >
+      </div>
+      <button type="submit" class="btn">Cadastrar</button>
+    </form>
+    <div class="erros-div">
+      {% if erro %}
+      <span class="erro-usuario">{{ erro }}</span>
+      {% endif %}
+      {% if mensagemsucesso %}
+          <span class="sucessosenha-usuario">{{ mensagemsucesso }}</span>
+      {% endif %}
+    </div>
+
+  </div>
+</body>
+</html>

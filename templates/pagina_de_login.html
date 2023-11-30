@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="/static/autenticacao/css/autenticacao.css">
+  <style>
+
+  .erros-div {
+      margin-top: 20px;
+      padding: 5px;
+
+
+  }
+  .erro-usuario {
+      margin-top: 20px;
+      font-family: "inter", sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #EF0000;
+}
+
+  .esquecisenhaclass {
+    display: none;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container2">
+    {% load static %}
+    <img src="{% static 'autenticacao/img/imagemlogin.png' %}" alt="Minha Imagem">
+  </div>
+  <div class="container">
+    <div class="login-painel-class">
+      <h2>Faça seu login</h2>
+      <form class="login-painel" action="{% url 'login' %}" method="post"> {% csrf_token %}
+        <div class="campo-senha">
+          <img class="icones-login" src="/static/autenticacao/img/usuario.svg" alt="Ícone"></p>
+          <input class='input-formulario'  placeholder="Digite o seu Email" type="Email" id="email_login" name="email">
+        </div>
+        <div class="campo-senha">
+          <img class="icones-login-2" src="/static/autenticacao/img/cadeado.svg" alt="Ícone"></p>
+          <input class='input-formulario' placeholder="Digite a sua Senha:" type="password" id="password" name="senha" >
+        </div>
+        <div style="margin-top: 15px; margin-bottom: 15px;">
+            <a href="https://wa.me/5518997691852" class="forgot-password">Esqueci minha senha</a>
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+      <div class="erros-div">
+        {% if erro %}
+        <span class="erro-usuario">{{ erro }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

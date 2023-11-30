@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Página de Ferramentas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/menu-lateral.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/paginacompleta.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/paginaconta.css">
+    <style>
+        .secao-titulo {
+            box-shadow: 1px 0 5px 1px #cfcfcf;
+            background: #ffffff;
+            width: 50%;
+            padding: 20px;
+            border: 2px solid #c3c3c3;
+            border-radius: 10px;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .titulo-video {
+            color: #000000;
+            font-family: "Inter", sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .texto-tutoriais {
+            font-family: "Inter", sans-serif;
+            color: #4a4a4a;
+            font-size: 30px;
+            font-weight: 600;
+
+        }
+
+        .todas-as-aulas-tutoriais {
+            font-family: "Inter", sans-serif;
+            color: #000000;
+            font-size: 23px;
+            font-weight: 600;
+
+        }
+
+        .aulas-texto {
+            font-family: "Inter", sans-serif;
+            color: #000000;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .div-texto-tutoriais {
+            padding-bottom: 50px;
+        }
+
+        .secao-aulas-videos-tutoriais {
+            background-color: #ffffff;
+            padding: 40px;
+            width: 900px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 350px 1fr ;
+        }
+
+        .lista-aulas {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+            width: 300px;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .lista-aulas::-webkit-scrollbar {
+            width: 0;
+        }
+
+
+
+        .iten-lista-aulas {
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #D8E5FF;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .botao-videoaula {
+            cursor: pointer;
+            width: 100%;
+            text-decoration: none;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="pagina-completa">
+        <div class="menu-lateral">
+            <div class="borda-elemento">
+                 <nav class="menu-1">
+                        <div class="logo-principal">
+                            <a class="logo-nav" href="#">
+                                <img src="/static/produtos/img/logodapagina.png" height="70" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="todos-os-itens-menu">
+                            <ul class="itens-geral-menu">
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/conta/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/usuario.png" height="30">
+                                            <span class="texto-menu">Minha Conta</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                               <li class="itens-unicos-menu">
+                                   <a class="links-paginas-menu" href="/">
+                                       <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/ferramentas.png" height="30">
+                                            <span class="texto-menu">Ferramentas</span>
+                                       </div>
+                                   </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/suporte/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/suporte.png" height="30">
+                                            <span class="texto-menu">Suporte</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu" style="display:none">
+                                    <a class="links-paginas-menu" href="/sugestoes/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/sugestoes.png" height="30">
+                                            <span class="texto-menu">Sugestões</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/tutoriais/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/tutoriais.png" height="30">
+                                            <span class="texto-menu">Tutoriais</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="interacao-menu">
+                            <a class="icone-interacao-fechar" href="#">
+                                <img src="/static/produtos/img/fechar-menu.svg" height="20" alt="Logo">
+                            </a>
+                        </div>
+                    </nav>
+                 <nav class="menu-fechado">
+                        <div class="logo-principal">
+                            <a class="logo-nav" href="#">
+                                <img src="/static/produtos/img/ferramentas.png" height="40" alt="Logo">
+                            </a>
+                        </div>
+
+                        <div class="todos-os-itens-menu">
+                            <ul class="itens-geral-menu-fechado">
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/conta/">
+                                       <img src="/static/produtos/img/usuario.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/">
+                                        <img src="/static/produtos/img/ferramentas.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/suporte/">
+                                        <img src="/static/produtos/img/suporte.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado" style="display:none">
+                                    <a class='menu-fechado-links' href="/sugestoes/">
+                                        <img src="/static/produtos/img/sugestoes.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/tutoriais/">
+                                        <img src="/static/produtos/img/tutoriais.png" height="30">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="interacao-menu">
+                            <a class="icone-interacao-abrir" href="#">
+                                <img src="/static/produtos/img/abrir-menu.svg" height="20" alt="Logo">
+                            </a>
+                        </div>
+                    </nav>
+            </div>
+        </div>
+        <div class="areadoprincipal">
+            <div class="principalborda">
+                <div>
+                    <div class="div-texto-tutoriais">
+                        <span class="texto-tutoriais">
+                            Tutoriais
+                        </span>
+                    </div>
+
+                    <div class="secao-aulas-videos-tutoriais">
+                        <div class="aulas-tutoriais-div">
+                            <div style="margin-bottom: 10px;">
+                                <span class="todas-as-aulas-tutoriais">
+                                    Todas as Aulas
+                                </span>
+                            </div>
+                            <div>
+                                <ul class="lista-aulas">
+                                    <a href="#" class="botao-videoaula" id="video1-aulas">
+                                        <li class="iten-lista-aulas">
+                                            <span class="aulas-texto">
+                                                Video de Boas Vindas
+                                            </span>
+                                            <img src="/static/produtos/img/play.png" width="20px" height="20px">
+                                        </li>
+                                    </a>
+                                    <a href="#" class="botao-videoaula" id="video2-aulas">
+                                        <li class="iten-lista-aulas">
+                                            <span class="aulas-texto">
+                                                Filtros Internos
+                                            </span>
+                                            <img src="/static/produtos/img/play.png" width="20px" height="20px">
+                                        </li>
+                                    </a>
+                                    <a href="#" class="botao-videoaula" id="video3-aulas" >
+                                        <li class="iten-lista-aulas">
+                                            <span class="aulas-texto">
+                                                Filtros Externos
+                                            </span>
+                                            <img src="/static/produtos/img/play.png" width="20px" height="20px">
+                                        </li>
+                                    </a>
+                                    <a href="#" class="botao-videoaula" id="video4-aulas" >
+                                        <li class="iten-lista-aulas">
+                                            <span class="aulas-texto">
+                                                Funcionalidades
+                                            </span>
+                                            <img src="/static/produtos/img/play.png" width="20px" height="20px">
+                                        </li>
+                                    </a>
+                                    <a href="#" class="botao-videoaula" id="video5-aulas">
+                                        <li class="iten-lista-aulas">
+                                            <span class="aulas-texto">
+                                                Como Funciona o Suporte
+                                            </span>
+                                            <img src="/static/produtos/img/play.png" width="20px" height="20px">
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="video-tutoriais-div">
+                            <iframe id="videoyoutube" width="100%" height="315" src="https://www.youtube.com/embed/eV4UcOAIP-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function changeVideo(videoId) {
+            player.loadVideoById(videoId);
+        }
+
+        document.getElementById('video1-aulas').addEventListener('click', function(e) {
+            iframe = document.getElementById('videoyoutube')
+            iframe.src = 'https://www.youtube.com/embed/eV4UcOAIP-4'
+        });
+
+        document.getElementById('video2-aulas').addEventListener('click', function(e) {
+            iframe = document.getElementById('videoyoutube')
+            iframe.src = 'https://www.youtube.com/embed/fiGJwD-0_H4'
+        });
+
+        document.getElementById('video3-aulas').addEventListener('click', function(e) {
+            iframe = document.getElementById('videoyoutube')
+            iframe.src = 'https://www.youtube.com/embed/cedVy8ZsbOk'
+        });
+
+        document.getElementById('video4-aulas').addEventListener('click', function(e) {
+            iframe = document.getElementById('videoyoutube')
+            iframe.src = 'https://www.youtube.com/embed/ulCnQvc3CjY'
+        });
+
+        document.getElementById('video5-aulas').addEventListener('click', function(e) {
+            iframe = document.getElementById('videoyoutube')
+            iframe.src = 'https://www.youtube.com/embed/PGSvITdmrXM'
+        });
+    </script>
+
+    <script src="/static/produtos/js/menu.js"></script>
+</body>
+</html>

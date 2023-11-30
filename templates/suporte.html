@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Página de Ferramentas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/menu-lateral.css">
+    <link rel="stylesheet" type="text/css" href="/static/produtos/css/paginacompleta.css">
+
+    <style>
+
+
+        .secoes-suporte {
+            display: flex;
+            width: 700px;
+            height: 80vh;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .suporte-div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+
+        }
+
+        .suporte-text {
+            font-family: "Inter", sans-serif;
+            color: #000000;
+            font-size: 26px;
+            font-weight: 700;
+            padding-bottom: 20px;
+        }
+
+        .link-suporte {
+            font-family: "Inter", sans-serif;
+            color: #00820D;
+            font-size: 19px;
+            font-weight: 700;
+            text-decoration: none;
+
+        }
+
+        .suporte-text-complemento {
+            font-family: "Inter", sans-serif;
+            color: #3B3B3B;
+            font-size: 19px;
+            font-weight: 700;
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="pagina-completa">
+        <div class="menu-lateral">
+            <div class="borda-elemento">
+                 <nav class="menu-1">
+                        <div class="logo-principal">
+                            <a class="logo-nav" href="#">
+                                <img src="/static/produtos/img/logodapagina.png" height="70" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="todos-os-itens-menu">
+                            <ul class="itens-geral-menu">
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/conta/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/usuario.png" height="30">
+                                            <span class="texto-menu">Minha Conta</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                               <li class="itens-unicos-menu">
+                                   <a class="links-paginas-menu" href="/">
+                                       <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/ferramentas.png" height="30">
+                                            <span class="texto-menu">Ferramentas</span>
+                                       </div>
+                                   </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/suporte/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/suporte.png" height="30">
+                                            <span class="texto-menu">Suporte</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu" style="display:none">
+                                    <a class="links-paginas-menu" href="/sugestoes/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/sugestoes.png" height="30">
+                                            <span class="texto-menu">Sugestões</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="itens-unicos-menu">
+                                    <a class="links-paginas-menu" href="/tutoriais/">
+                                        <div class="itens-menu-lateral-div">
+                                            <img src="/static/produtos/img/tutoriais.png" height="30">
+                                            <span class="texto-menu">Tutoriais</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="interacao-menu">
+                            <a class="icone-interacao-fechar" href="#">
+                                <img src="/static/produtos/img/fechar-menu.svg" height="20" alt="Logo">
+                            </a>
+                        </div>
+                    </nav>
+                 <nav class="menu-fechado">
+                        <div class="logo-principal">
+                            <a class="logo-nav" href="#">
+                                <img src="/static/produtos/img/ferramentas.png" height="40" alt="Logo">
+                            </a>
+                        </div>
+
+                        <div class="todos-os-itens-menu">
+                            <ul class="itens-geral-menu-fechado">
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/conta/">
+                                       <img src="/static/produtos/img/usuario.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/">
+                                        <img src="/static/produtos/img/ferramentas.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/suporte/">
+                                        <img src="/static/produtos/img/suporte.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado" style="display:none">
+                                    <a class='menu-fechado-links' href="/sugestoes/">
+                                        <img src="/static/produtos/img/sugestoes.png" height="30">
+                                    </a>
+                                </li>
+
+                                <li class="itens-unicos-menu-fechado">
+                                    <a class='menu-fechado-links' href="/tutoriais/">
+                                        <img src="/static/produtos/img/tutoriais.png" height="30">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="interacao-menu">
+                            <a class="icone-interacao-abrir" href="#">
+                                <img src="/static/produtos/img/abrir-menu.svg" height="20" alt="Logo">
+                            </a>
+                        </div>
+                    </nav>
+            </div>
+        </div>
+        <div class="areadoprincipal">
+            <div class="principalborda">
+                <div class="secoes-suporte">
+                    <div class="suporte-div">
+                        <span class="suporte-text">Suporte Pelo WhatsApp</span>
+                        <a href="https://wa.me/5518997691852" class="link-suporte">(18) 99769-1852</a>
+                    </div>
+                    <div class="suporte-div">
+                        <span class="suporte-text">Suporte Pelo E-mail</span>
+                        <span class="suporte-text-complemento">rafa.g.leite@hotmail.com</span>
+                    </div>
+                    <div class="suporte-div">
+                        <span class="suporte-text">Suporte Ao-Vivo Pelo Google Meet</span>
+                        <span class="suporte-text-complemento"> Link do meet: <a href="https://meet.google.com/nea-erss-pnz?pli=1" class="link-suporte">https://meet.google.com/nea-erss-pnz?pli=1</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/produtos/js/menu.js"></script>
+</body>
+</html>
