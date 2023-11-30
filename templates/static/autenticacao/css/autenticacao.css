@@ -1,0 +1,122 @@
+body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+.container2{
+  margin-top: 40px;
+  width: 500px;
+  height: 550px;
+  background-color: #ffffff;
+  color: #ffffff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  width: 500px;
+  height: 550px;
+  color: #000000;
+  border-radius: 10px;
+  padding: 70px;
+  box-sizing: border-box;
+  box-shadow: 0 0 12px 1px #C8C8C8;
+  text-align: center;
+}
+
+.forgot-password {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 20px;
+  color: #848484;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Inter", sans-serif;
+  font-size: 38px;
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+}
+
+.input-formulario {
+  width: 80%;
+  padding: 15px;
+  color: #000000;
+  border: 1px solid #C8C8C8;
+  outline: none;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  padding-left: 60px;
+}
+
+.input-formulario:focus {
+  border: 1px solid blue;
+}
+
+.campo-senha {
+position: relative;
+}
+
+.form-group input::placeholder {
+  color: #D4D4D1;
+}
+
+.btn {
+  width: 100%;
+  background-color: #327CCB;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 120px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #0037A8;
+}
+
+.icones-login {
+    width: 21px;
+    height: auto;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+
+.icones-login-2 {
+    width: 21px;
+    height: auto;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+}
+
